@@ -21,9 +21,13 @@ OpenWRT/LEDE 下载站镜像。
 
 如要使用本镜像作为 OpenWRT/LEDE 系统 opkg 软件仓库，SSH 登录路由器编辑 :file:`/etc/opkg/distfeeds.conf` 文件，同样按照上面的方法替换域名即可。可以使用如下命令操作：
 
-::
+LEDE-1701版本：
 
-    sed -i 's_downloads\.lede-project\.org_mirrors.ustc.edu.cn/lede_' /etc/opkg/distfeeds.conf
+    sed -i 's_downloads\.lede-project\.org_mirrors.ustc.edu.cn/lede_' /etc/opkg/distfeeds.conf   
+    
+openwrt-1806版本：
+
+    sed -i 's_downloads\.openwrt\.org_mirrors.ustc.edu.cn/lede_' /etc/opkg/distfeeds.conf
 
 之后运行 `opkg update` 更新软件索引，注意检查是否出现错误。
 
